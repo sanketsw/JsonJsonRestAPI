@@ -2,21 +2,20 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.api</groupId>
 	<artifactId>JsonJsonRestAPI</artifactId>
-	<version>0.0.12</version>
+	<version>0.0.1</version>
 	<packaging>pom</packaging>
 
 	<name>JsonJsonRestAPI</name>
 	<url>http://maven.apache.org</url>
-
 <modules>
-        <module>TransformJava</module>
-	<module>APIComputesJava</module>
- </modules>
+    <module>TransformJava</module>
+    <module>APIComputesJava</module>
+</modules>
 
   <scm>
     <connection>scm:git:https://github.com/sanketsw/JsonJsonRestAPI.git</connection>
     <developerConnection>scm:git:https://github.com/sanketsw/JsonJsonRestAPI.git</developerConnection>
-  <tag>JsonJsonRestAPI-0.0.12</tag>
+  <tag>JsonJsonRestAPI-0.0.1</tag>
   </scm>
 
 <!-- <dependencies>
