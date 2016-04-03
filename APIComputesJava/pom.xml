@@ -12,15 +12,27 @@
 
         <groupId>com.anz.api</groupId>
         <artifactId>JsonJsonRestAPIJava</artifactId>
-        <version>0.0.30-SNAPSHOT</version>
+        <version>0.0.35-SNAPSHOT</version>
         <packaging>jar</packaging>
 
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
-
+	
 	<dependencies>
+		     <dependency>
+                 <groupId>com.ibm.broker</groupId>
+                <artifactId>com.ibm.broker.plugin</artifactId>
+                         <version>1.0.0</version>
+        </dependency>
+
+        <dependency>
+    <groupId>com.ibm.broker</groupId>
+    <artifactId>com.ibm.broker.javacompute</artifactId>
+    <version>1.0.0</version>
+</dependency>
+
 		<dependency>
 			<groupId>com.anz.api</groupId>
 			<artifactId>TransformJava</artifactId>
@@ -29,7 +41,7 @@
 		</dependency>
 	</dependencies>
 	<build>
-		<sourceDirectory>com/*</sourceDirectory>
+		<sourceDirectory>com/api/computes</sourceDirectory>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
