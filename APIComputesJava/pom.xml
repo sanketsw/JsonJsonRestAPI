@@ -3,7 +3,7 @@
 
 	<groupId>com.api</groupId>
 	<artifactId>JsonJsonRestAPIJava</artifactId>
-	<version>0.0.12-SNAPSHOT</version>
+	<version>0.0.2-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
 	<name>JsonJsonRestAPIJava</name>
@@ -17,7 +17,7 @@
 		<dependency>
 			<groupId>com.api</groupId>
 			<artifactId>transformJava</artifactId>
-			<version>0.0.4-SNAPSHOT</version>
+			<version>0.0.2-SNAPSHOT</version>
 			 <classifier>jar-with-dependencies</classifier>
 		</dependency>
 	</dependencies>
