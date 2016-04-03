@@ -10,12 +10,12 @@
 	<name>JsonJsonRestAPI</name>
 	<groupId>com.anz.api</groupId>
         <artifactId>JsonJsonRestAPI</artifactId>
-        <version>0.0.24-SNAPSHOT</version>
+        <version>0.0.27-SNAPSHOT</version>
         <packaging>pom</packaging>
 
 
 <modules>
-    <module>TransformJava</module>
+   <module>TransformJava</module>
     <module>APIComputesJava</module>
 </modules>
 
