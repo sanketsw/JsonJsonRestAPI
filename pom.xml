@@ -1,16 +1,37 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.api</groupId>
-	<artifactId>JsonJsonRestAPI</artifactId>
-	<version>0.0.4-SNAPSHOT</version>
-	<packaging>pom</packaging>
+	
+<parent>
+  <groupId>com.anz</groupId>
+  <artifactId>anz-parent</artifactId>
+  <version>1.0.0</version>
+</parent>
 
 	<name>JsonJsonRestAPI</name>
-	<url>http://maven.apache.org</url>
+	<groupId>com.anz.api</groupId>
+        <artifactId>JsonJsonRestAPI</artifactId>
+        <version>0.0.16-SNAPSHOT</version>
+        <packaging>pom</packaging>
+
+
 <modules>
     <module>TransformJava</module>
     <module>APIComputesJava</module>
 </modules>
+
+<!-- <distributionManagement>
+     <repository>
+        <id>anz.release</id>
+        <name>Internal Release Repository</name>
+        <url>http://localhost:8081/artifactory/ext-release-local/</url>
+      </repository>
+       <snapshotRepository>
+        <id>anz.snapshots</id>
+        <name>Internal Snapshot Repository</name>
+        <url>http://localhost:8081/artifactory/ext-snapshot-local/</url>
+      </snapshotRepository>
+</distributionManagement>
+-->
 
   <scm>
     <connection>scm:git:https://github.com/sanketsw/JsonJsonRestAPI.git</connection>
