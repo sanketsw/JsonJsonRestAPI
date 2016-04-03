@@ -11,8 +11,8 @@
 
 	<groupId>com.anz.api</groupId>
 	<artifactId>TransformJava</artifactId>
-	<version>0.0.17-SNAPSHOT</version>
-	<packaging>jar</packaging>
+	<version>0.0.18-SNAPSHOT</version>
+	<packaging>pom</packaging>
 
 
 	<properties>
