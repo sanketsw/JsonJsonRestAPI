@@ -10,7 +10,7 @@
 	<name>JsonJsonRestAPI</name>
 	<groupId>com.anz.api</groupId>
         <artifactId>JsonJsonRestAPI</artifactId>
-        <version>0.0.39-SNAPSHOT</version>
+        <version>0.0.45-SNAPSHOT</version>
         <packaging>pom</packaging>
 
 
@@ -60,19 +60,19 @@
 			<artifactId>maven-release-plugin</artifactId>
 			<version>2.5.3</version>
 		</dependency>
-		<dependency>
+<!--		<dependency>
     <groupId>com.anz.api</groupId>
     <artifactId>JsonJsonRestAPIJava</artifactId>
     <version>${project.version}</version>
 </dependency>
-	
-<dependency>
+-->	
+<!--<dependency>
     <groupId>com.anz.api</groupId>
     <artifactId>TransformJava</artifactId>
     <version>${project.version}</version>
     <classifier>jar-with-dependencies</classifier>
 </dependency>
-
+-->
 	</dependencies>
 	
 	<build>
