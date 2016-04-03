@@ -10,7 +10,7 @@
 	<name>JsonJsonRestAPI</name>
 	<groupId>com.anz.api</groupId>
         <artifactId>JsonJsonRestAPI</artifactId>
-        <version>0.0.20-SNAPSHOT</version>
+        <version>0.0.21-SNAPSHOT</version>
         <packaging>pom</packaging>
 
 
