@@ -10,7 +10,7 @@
 	<name>JsonJsonRestAPI</name>
 	<groupId>com.anz.api</groupId>
         <artifactId>JsonJsonRestAPI</artifactId>
-        <version>0.0.61-SNAPSHOT</version>
+        <version>0.0.62-SNAPSHOT</version>
         <packaging>pom</packaging>
 
 
@@ -114,7 +114,7 @@
                         <argument>${project.name}</argument>
 			 <argument>bootstrap</argument>
 			 <argument>-Dbar.version</argument>
-			 <argument>${project.version}-SNAPSHOT</argument>
+			 <argument>${project.version}</argument>
 			</arguments>
                     </configuration>
                     </execution>
