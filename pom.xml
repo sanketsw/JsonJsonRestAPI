@@ -10,7 +10,7 @@
 	<name>JsonJsonRestAPI</name>
 	<groupId>com.anz.api</groupId>
         <artifactId>JsonJsonRestAPI</artifactId>
-        <version>0.0.54-SNAPSHOT</version>
+        <version>0.0.55-SNAPSHOT</version>
         <packaging>pom</packaging>
 
 
@@ -107,7 +107,14 @@
                     </goals>
                     <configuration>
                        <!-- <executable>ant -buildfile main_bootstrap.xml -Dpath.build=${project.name} bootstrap </executable> -->
-                            <executable> date </executable>
+                         <executable>ant</executable>
+                         <arguments>
+                	 <argument>-buildfile</argument> 
+			<argument>main_bootstrap.xml</argument>
+			<argument>-Dpath.build</argument>
+                        <argument>${project.name}</argument>
+			 <argument>bootstrap</argument>
+			</arguments>
                     </configuration>
                     </execution>
             </executions>
