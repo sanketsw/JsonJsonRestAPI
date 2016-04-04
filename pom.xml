@@ -10,7 +10,7 @@
 	<name>JsonJsonRestAPI</name>
 	<groupId>com.anz.api</groupId>
         <artifactId>JsonJsonRestAPI</artifactId>
-        <version>0.0.56-SNAPSHOT</version>
+        <version>0.0.57-SNAPSHOT</version>
         <packaging>pom</packaging>
 
 
@@ -111,7 +111,7 @@
                 	 <argument>-buildfile</argument> 
 			<argument>main_bootstrap.xml</argument>
 			<argument>-Dpath.build</argument>
-                        <argument>${project.name}</argument>
+                        <argument>${project.name}-${project.version}-SNAPSHOT</argument>
 			 <argument>bootstrap</argument>
 			</arguments>
                     </configuration>
