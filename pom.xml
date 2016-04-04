@@ -10,7 +10,7 @@
 	<name>JsonJsonRestAPI</name>
 	<groupId>com.anz.api</groupId>
         <artifactId>JsonJsonRestAPI</artifactId>
-        <version>0.0.50-SNAPSHOT</version>
+        <version>0.0.54-SNAPSHOT</version>
         <packaging>pom</packaging>
 
 
@@ -60,12 +60,14 @@
 			<artifactId>maven-release-plugin</artifactId>
 			<version>2.5.3</version>
 		</dependency>
+
 <!--		<dependency>
     <groupId>com.anz.api</groupId>
     <artifactId>JsonJsonRestAPIJava</artifactId>
     <version>${project.version}</version>
 </dependency>
 -->	
+
 <!--<dependency>
     <groupId>com.anz.api</groupId>
     <artifactId>TransformJava</artifactId>
@@ -73,8 +75,7 @@
     <classifier>jar-with-dependencies</classifier>
 </dependency>
 -->
-	</dependencies>
-	
+    </dependencies>
 	<build>
 		<plugins>
 			<plugin>
@@ -92,6 +93,25 @@
         <artifactId>maven-release-plugin</artifactId>
         <version>2.5.3</version>
       </plugin>
+
+      <plugin>
+            <groupId>org.codehaus.mojo</groupId>
+            <artifactId>exec-maven-plugin</artifactId>
+            <version>1.4.0</version>
+            <executions>
+               <execution>
+                    <id>script-build</id> 
+		       <phase>package</phase>
+                    <goals>
+                        <goal>exec</goal>
+                    </goals>
+                    <configuration>
+                       <!-- <executable>ant -buildfile main_bootstrap.xml -Dpath.build=${project.name} bootstrap </executable> -->
+                            <executable> date </executable>
+                    </configuration>
+                    </execution>
+            </executions>
+           </plugin>
 
 <!--			<plugin>
 				<artifactId>maven-assembly-plugin</artifactId>
