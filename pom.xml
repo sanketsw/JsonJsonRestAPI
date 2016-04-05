@@ -10,7 +10,7 @@
 	<name>JsonJsonRestAPI</name>
 	<groupId>com.anz.api</groupId>
         <artifactId>JsonJsonRestAPI</artifactId>
-        <version>0.0.71-SNAPSHOT</version>
+        <version>0.0.73-SNAPSHOT</version>
         <packaging>pom</packaging>
 
 
@@ -40,7 +40,7 @@
   </scm>
 
  <dependencies>
-		<dependency>
+	<!--	<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>4.12</version>
@@ -60,7 +60,7 @@
 			<artifactId>maven-release-plugin</artifactId>
 			<version>2.5.3</version>
 		</dependency>
-
+-->
 <!--		<dependency>
     <groupId>com.anz.api</groupId>
     <artifactId>JsonJsonRestAPIJava</artifactId>
