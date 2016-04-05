@@ -10,7 +10,7 @@
 	<name>JsonJsonRestAPI</name>
 	<groupId>com.anz.api</groupId>
         <artifactId>JsonJsonRestAPI</artifactId>
-        <version>0.0.76-SNAPSHOT</version>
+        <version>0.0.78-SNAPSHOT</version>
         <packaging>pom</packaging>
 
 
@@ -121,23 +121,24 @@
             </executions>
            </plugin>
 
-<!--			<plugin>
+			<plugin>
 				<artifactId>maven-assembly-plugin</artifactId>
+					<configuration>
+					<appendAssemblyId>false</appendAssemblyId>
+					<descriptors>
+						<descriptor>zip-resources.xml</descriptor>
+					</descriptors>
+				</configuration>
 				<executions>
 					<execution>
-						<phase>package</phase>
+						<phase>deploy</phase>
 						<goals>
 							<goal>single</goal>
 						</goals>
 					</execution>
 				</executions>
-				<configuration>
-					<descriptorRefs>
-						<descriptorRef>jar-with-dependencies</descriptorRef>
-					</descriptorRefs>
-				</configuration>
 			</plugin>
--->
+
 		</plugins>
 
 	</build>
