@@ -10,7 +10,7 @@
 	<name>JsonJsonRestAPI</name>
 	<groupId>com.anz.api</groupId>
         <artifactId>JsonJsonRestAPI</artifactId>
-        <version>0.0.83-SNAPSHOT</version>
+        <version>0.0.84-SNAPSHOT</version>
         <packaging>pom</packaging>
 
 
@@ -66,7 +66,7 @@
             <executions>
                <execution>
                     <id>script-build</id> 
-		       <phase>package</phase>
+		       <phase>deploy</phase>
                     <goals>
                         <goal>exec</goal>
                     </goals>
@@ -83,38 +83,11 @@
 			</arguments>
                     </configuration>
                     </execution>
+		
             </executions>
            </plugin>
    </plugins>
 </build>
-</profile>
-
-<profile>
-   <id>uploadbar</id>
-	<build>
-	<plugins>
-	<!--		<plugin>
-				<artifactId>maven-assembly-plugin</artifactId>
-					<configuration>
-					<appendAssemblyId>false</appendAssemblyId>
-					<descriptors>
-						<descriptor>zip-resources.xml</descriptor>
-					</descriptors>
-				</configuration>
-				<executions>
-					<execution>
-						<phase>deploy</phase>
-						<goals>
-							<goal>single</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
--->
-
-		</plugins>
-
-	</build>
 </profile>
 </profiles>
 </project>
