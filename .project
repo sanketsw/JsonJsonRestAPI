@@ -3,8 +3,12 @@
 	<name>JsonJsonRestAPI</name>
 	<comment></comment>
 	<projects>
-		<project>JsonJsonRestAPIJava</project>
+	<!--	<project>JsonJsonRestAPIJava</project>
 		<project>TransformJava</project>
+        -->
+	       <project>APIComputesJava</project>
+                <project>TransformJava</project>
+
 	</projects>
 	<buildSpec>
 		<buildCommand>
