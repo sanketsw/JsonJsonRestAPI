@@ -14,7 +14,7 @@
 	<name>JsonJsonRestAPI</name>
 	<groupId>com.anz.api</groupId>
         <artifactId>JsonJsonRestAPI</artifactId>
-        <version>0.0.109-SNAPSHOT</version>
+        <version>0.0.110-SNAPSHOT</version>
         <packaging>pom</packaging>
 <modules>
    <module>TransformJava</module>
@@ -40,17 +40,6 @@
     <developerConnection>scm:git:https://github.com/sanketsw/JsonJsonRestAPI.git</developerConnection>
   </scm>
 
-<profiles>
-   <profile>
-       <id>createbar</id>	
-  <dependencies>
-    <dependency>
-      <groupId>org.codehaus.groovy</groupId>
-      <artifactId>groovy-all</artifactId>
-      <!-- any version of Groovy \>= 1.5.0 should work here -->
-      <version>2.4.4</version>
-    </dependency>
-  </dependencies>
 <build>
 		<plugins>
 			<plugin>
@@ -98,6 +87,4 @@
            </plugin>
    </plugins>
 </build>
-</profile>
-</profiles>
 </project>
