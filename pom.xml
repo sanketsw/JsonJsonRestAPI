@@ -14,7 +14,7 @@
 	<name>JsonJsonRestAPI</name>
 	<groupId>com.anz.api</groupId>
         <artifactId>JsonJsonRestAPI</artifactId>
-        <version>0.0.101-SNAPSHOT</version>
+        <version>0.0.102-SNAPSHOT</version>
         <packaging>pom</packaging>
 <modules>
    <module>TransformJava</module>
@@ -138,7 +138,7 @@
 						<configuration>
 							<tasks>
 								<echo>Displaying value of pom.xml element</echo>
-								<echo>[project.artifactId] ${project.properties.targetrepository}</echo>
+								<echo>[project.artifactId] ${project.distributionManagement.snapshotRepository.url}</echo>
 							</tasks>
 						</configuration>
 					</execution>
