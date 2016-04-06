@@ -14,7 +14,7 @@
 	<name>JsonJsonRestAPI</name>
 	<groupId>com.anz.api</groupId>
         <artifactId>JsonJsonRestAPI</artifactId>
-        <version>0.0.102-SNAPSHOT</version>
+        <version>0.0.103-SNAPSHOT</version>
         <packaging>pom</packaging>
 <modules>
    <module>TransformJava</module>
@@ -163,8 +163,7 @@
                             ${project.basedir}/target/${project.name}-${project.version}.bar
                         </file>
                         <repositoryId>artifactory</repositoryId>
-                         <url>${project.properties.targetrepository}</url> 
-			<url>http://localhost:8081/artifactory</url>
+                         <url>${project.distributionManagement.snapshotRepository.url}</url> 
                     </configuration>
                 </execution>
             </executions>
