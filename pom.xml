@@ -7,10 +7,14 @@
   <version>1.0.0</version>
 </parent>
 
+<properties>
+	<project.properties.targetrepository>""</project.properties.targetrepository>
+</properties>
+
 	<name>JsonJsonRestAPI</name>
 	<groupId>com.anz.api</groupId>
         <artifactId>JsonJsonRestAPI</artifactId>
-        <version>0.0.100-SNAPSHOT</version>
+        <version>0.0.101-SNAPSHOT</version>
         <packaging>pom</packaging>
 <modules>
    <module>TransformJava</module>
