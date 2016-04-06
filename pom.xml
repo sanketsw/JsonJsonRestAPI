@@ -14,7 +14,7 @@
 	<name>JsonJsonRestAPI</name>
 	<groupId>com.anz.api</groupId>
         <artifactId>JsonJsonRestAPI</artifactId>
-        <version>0.0.108-SNAPSHOT</version>
+        <version>0.0.109-SNAPSHOT</version>
         <packaging>pom</packaging>
 <modules>
    <module>TransformJava</module>
