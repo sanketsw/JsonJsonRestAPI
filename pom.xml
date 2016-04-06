@@ -14,7 +14,7 @@
 	<name>JsonJsonRestAPI</name>
 	<groupId>com.anz.api</groupId>
         <artifactId>JsonJsonRestAPI</artifactId>
-        <version>0.0.111-SNAPSHOT</version>
+        <version>0.0.113-SNAPSHOT</version>
         <packaging>pom</packaging>
 <modules>
    <module>TransformJava</module>
@@ -85,6 +85,25 @@
 		
             </executions>
            </plugin>
+<!--		<plugin>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<configuration>
+					<appendAssemblyId>false</appendAssemblyId>
+					<descriptors>
+						<descriptor>zip-resources.xml</descriptor>
+					</descriptors>
+				</configuration>
+				<executions>
+					<execution>
+						<id>make-assembly</id>
+						<phase>package</phase>
+						<goals>
+							<goal>single</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+-->
    </plugins>
 </build>
 </project>
