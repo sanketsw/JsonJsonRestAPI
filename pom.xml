@@ -10,10 +10,8 @@
 	<name>JsonJsonRestAPI</name>
 	<groupId>com.anz.api</groupId>
         <artifactId>JsonJsonRestAPI</artifactId>
-        <version>0.0.84-SNAPSHOT</version>
+        <version>0.0.100-SNAPSHOT</version>
         <packaging>pom</packaging>
-
-
 <modules>
    <module>TransformJava</module>
     <module>APIComputesJava</module>
@@ -41,6 +39,14 @@
 <profiles>
    <profile>
        <id>createbar</id>	
+  <dependencies>
+    <dependency>
+      <groupId>org.codehaus.groovy</groupId>
+      <artifactId>groovy-all</artifactId>
+      <!-- any version of Groovy \>= 1.5.0 should work here -->
+      <version>2.4.4</version>
+    </dependency>
+  </dependencies>
 <build>
 		<plugins>
 			<plugin>
@@ -86,6 +92,79 @@
 		
             </executions>
            </plugin>
+  <plugin>
+        <groupId>org.codehaus.gmavenplus</groupId>    
+	<artifactId>gmavenplus-plugin</artifactId>    
+	<version>1.5</version>
+            <executions>
+                <execution>
+                    <id>choose-target-repository</id>
+                    <phase>initialize</phase>
+                    <goals>
+                        <goal>execute</goal>
+                    </goals>
+                    <configuration>
+                        <scripts>
+			<script>
+			<![CDATA[
+                            if (project.version.endsWith("-SNAPSHOT")){
+                              project.properties.targetrepository = project.distributionManagement.snapshotRepository.url;
+                            }
+                            else {
+                              project.properties.targetrepository = project.distributionManagement.repository.url;
+                            }
+			   ]]>
+                        </script>
+			</scripts>
+                    </configuration>
+                </execution>
+            </executions>
+    </plugin>
+
+<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-antrun-plugin</artifactId>
+				<version>1.1</version>
+				<executions>
+					<execution>
+						<phase>validate</phase>
+						<goals>
+							<goal>run</goal>
+						</goals>
+						<configuration>
+							<tasks>
+								<echo>Displaying value of pom.xml element</echo>
+								<echo>[project.artifactId] ${project.properties.targetrepository}</echo>
+							</tasks>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+<!-- <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-deploy-plugin</artifactId>
+            <version>2.7</version>
+            <configuration>
+                <skip>true</skip>
+            </configuration>
+            <executions>
+                <execution>
+                    <id>deploy-classifier</id>
+                    <phase>deploy</phase>
+                    <goals>
+                        <goal>deploy-file</goal>
+                    </goals>
+                    <configuration>
+                        <file>
+                            ${project.basedir}/target/${project.name}-${project.version}.bar
+                        </file>
+                        <repositoryId>artifactory</repositoryId>
+                         <url>${project.properties.targetrepository}</url> 
+			<url>http://localhost:8081/artifactory</url>
+                    </configuration>
+                </execution>
+            </executions>
+        </plugin> -->
    </plugins>
 </build>
 </profile>
