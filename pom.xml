@@ -14,7 +14,7 @@
 	<name>JsonJsonRestAPI</name>
 	<groupId>com.anz.api</groupId>
         <artifactId>JsonJsonRestAPI</artifactId>
-        <version>0.0.103-SNAPSHOT</version>
+        <version>0.0.108-SNAPSHOT</version>
         <packaging>pom</packaging>
 <modules>
    <module>TransformJava</module>
@@ -96,78 +96,6 @@
 		
             </executions>
            </plugin>
-  <plugin>
-        <groupId>org.codehaus.gmavenplus</groupId>    
-	<artifactId>gmavenplus-plugin</artifactId>    
-	<version>1.5</version>
-            <executions>
-                <execution>
-                    <id>choose-target-repository</id>
-                    <phase>initialize</phase>
-                    <goals>
-                        <goal>execute</goal>
-                    </goals>
-                    <configuration>
-                        <scripts>
-			<script>
-			<![CDATA[
-                            if (project.version.endsWith("-SNAPSHOT")){
-                              project.properties.targetrepository = project.distributionManagement.snapshotRepository.url;
-                            }
-                            else {
-                              project.properties.targetrepository = project.distributionManagement.repository.url;
-                            }
-			   ]]>
-                        </script>
-			</scripts>
-                    </configuration>
-                </execution>
-            </executions>
-    </plugin>
-
-<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-antrun-plugin</artifactId>
-				<version>1.1</version>
-				<executions>
-					<execution>
-						<phase>validate</phase>
-						<goals>
-							<goal>run</goal>
-						</goals>
-						<configuration>
-							<tasks>
-								<echo>Displaying value of pom.xml element</echo>
-								<echo>[project.artifactId] ${project.distributionManagement.snapshotRepository.url}</echo>
-							</tasks>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>
-<!-- <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-deploy-plugin</artifactId>
-            <version>2.7</version>
-            <configuration>
-                <skip>true</skip>
-            </configuration>
-            <executions>
-                <execution>
-                    <id>deploy-classifier</id>
-                    <phase>deploy</phase>
-                    <goals>
-                        <goal>deploy-file</goal>
-                    </goals>
-                    <configuration>
-                        <file>
-                            ${project.basedir}/target/${project.name}-${project.version}.bar
-                        </file>
-                        <repositoryId>artifactory</repositoryId>
-                         <url>${project.distributionManagement.snapshotRepository.url}</url> 
-                    </configuration>
-                </execution>
-            </executions>
-        </plugin> -->
    </plugins>
 </build>
 </profile>
